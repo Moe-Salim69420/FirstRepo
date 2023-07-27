@@ -2,16 +2,16 @@
 #include <sstream>
 #include <string>
 
-// this unit will check the validity of this command 
+//This unit will check the validity of this command 
 void unit1(std::string command) {
 	//extract the command
 	std::stringstream ee(command);
 	std::string action;
-	//store the first word into action so we can now if its "show", "print", anything
+	//store the first word into action so we can know if its "show", "print", anything
 	ee >> action; 
-	// if its "show" the we will go to the remaining part of the string(command)
+	// if it "show" then we will go to the remaining part of the string(command)
 	if (action == "show") {
-		//store the other part of the string (the target) which is eaither boobs or thighs 
+		//store the other part of the string (the target) which is either boobs or thighs 
 		std::string target;
 		ee >> target;
 
