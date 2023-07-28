@@ -29,20 +29,6 @@ void unit1(std::string command) {
 	}
 }	
 
-int main() {
-	std::cout << "Enter a command MOTHER_FUCKER!, I CAN HANDLE IT " << std::endl; 
-	std::string command;
-	std::getline(std::cin, command);
-	//les go to the parser
-	unit1(command); 
-
-	
-
-
-
-	}
-	
-
 
 
 

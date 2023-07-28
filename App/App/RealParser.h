@@ -1,8 +1,8 @@
 #pragma once
 #include <iostream>
-class Parser {
-public: 
-	
+class RealParser {
+public:
+
 	void unit1(std::string command);
 };
 
