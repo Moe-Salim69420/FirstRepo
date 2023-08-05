@@ -1,2 +1,2 @@
 # FirstRepo
-just an example rep
+Ashen-Project Repository
