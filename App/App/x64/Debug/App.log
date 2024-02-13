@@ -1,3 +1,0 @@
-﻿  RealMain.cpp
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\filesystem(13): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
-  App.vcxproj -> C:\Users\user\Documents\Project-Ashen\Implementaion\Dev\FirstRepo\App\x64\Debug\App.exe
