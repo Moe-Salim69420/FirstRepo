@@ -1,0 +1,32 @@
+﻿  CommandBase.cpp
+C:\Users\hmoda\Documents\Project-Ashen\Implementaion\Dev\Ashen\Ashen\CommandBase.cpp(12,68): error C2440: 'initializing': cannot convert from 'initializer list' to 'std::unordered_map<std::string,CommandFunction,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,CommandFunction>>>'
+  C:\Users\hmoda\Documents\Project-Ashen\Implementaion\Dev\Ashen\Ashen\CommandBase.cpp(12,68):
+  'std::unordered_map<std::string,CommandFunction,std::hash<std::string>,std::equal_to<std::string>,std::allocator<std::pair<const std::string,CommandFunction>>>::unordered_map(std::initializer_list<_Ty>)': cannot convert argument 1 from 'initializer list' to 'std::initializer_list<_Ty>'
+          with
+          [
+              _Ty=std::pair<const std::string,CommandFunction>
+          ]
+  	C:\Users\hmoda\Documents\Project-Ashen\Implementaion\Dev\Ashen\Ashen\CommandBase.cpp(12,68):
+  	Element '1': no conversion from 'initializer list' to '_Ty'
+          with
+          [
+              _Ty=std::pair<const std::string,CommandFunction>
+          ]
+  	C:\Users\hmoda\Documents\Project-Ashen\Implementaion\Dev\Ashen\Ashen\CommandBase.cpp(12,68):
+  	Element '2': no conversion from 'initializer list' to '_Ty'
+          with
+          [
+              _Ty=std::pair<const std::string,CommandFunction>
+          ]
+  	C:\Users\hmoda\Documents\Project-Ashen\Implementaion\Dev\Ashen\Ashen\CommandBase.cpp(12,68):
+  	Element '3': no conversion from 'initializer list' to '_Ty'
+          with
+          [
+              _Ty=std::pair<const std::string,CommandFunction>
+          ]
+  	C:\Users\hmoda\Documents\Project-Ashen\Implementaion\Dev\Ashen\Ashen\CommandBase.cpp(12,68):
+  	while trying to match the argument list '(initializer list)'
+  
+  Executor.cpp
+  Parser.cpp
+  Generating Code...
