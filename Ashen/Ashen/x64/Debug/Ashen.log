@@ -1,3 +1,0 @@
-﻿  Main.cpp
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
-  Ashen.vcxproj -> C:\Users\hmoda\Documents\Project-Ashen\Implementaion\Dev\Ashen\x64\Debug\Ashen.exe
