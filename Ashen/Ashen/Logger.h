@@ -1,5 +1,7 @@
 #pragma once
+#include <string>
+
 class Logger {
-public : 
-	void LogCommand(std::string Input);
+public:
+    Logger(const std::string& input);
 };

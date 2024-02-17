@@ -19,26 +19,39 @@ const std::string COLOR_BLUE = "\033[1;34m"; // Lighter blue for files
 
 
 // List Directory Function
-const void Executor::ListDirectory(const std::string Input) {
-	
-	for (const auto& entryObj : fs::directory_iterator(fs::current_path().string())) {
+const void Executor::ListDirectory(const std::string Input, const std::string Parameter) {
+    // Determine the directory to list
+    std::string directory;
+    if (Parameter.empty()) {
+        // No parameter provided, list current directory
+        directory = fs::current_path().string();
+    }
+    else {
+        // Use the provided directory
+        directory = Parameter;
+    }
 
-		if (entryObj.is_directory()) {
-			std::cout << COLOR_RED << entryObj.path().filename().string() << COLOR_RESET << " ";
-		}
-		else {
-
-		std::cout << COLOR_BLUE << entryObj.path().filename().string() << COLOR_RESET <<"  ";
-		}
-
-	}
-	std::cout << "\n\n";
+    // List the directory
+    for (const auto& entryObj : fs::directory_iterator(directory)) {
+        if (entryObj.is_directory()) {
+            std::cout << COLOR_RED << entryObj.path().filename().string() << COLOR_RESET << " ";
+        }
+        else {
+            std::cout << COLOR_BLUE << entryObj.path().filename().string() << COLOR_RESET << "  ";
+        }
+    }
+    std::cout << "\n\n";
 }
+
+
 const void Executor::Help(const std::string Input) {
 	for (const auto& Pair : CommandBaseMap) {
-		std::cout << COLOR_YELLOW <<Pair.first << COLOR_RESET<< "\n";
-	}
+		if (Pair.first != "help") {
+			std::cout << COLOR_YELLOW << Pair.first << "		" << Pair.second.second << COLOR_RESET << "\n";
+		}
+		}
 }
+
 const void Executor::Clear(const std::string Input) {
 	system("cls");
 }

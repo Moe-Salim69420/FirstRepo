@@ -2,8 +2,8 @@
 #include "Logger.h"
 #include "Parser.h"
 
-void Logger::LogCommand(std::string Input)
-{
-	std::cout << "Sorry Ur Command " << "\"" <<Input << "\"" << " Is not Valid \n";
 
+Logger::Logger(const std::string& input) {
+    std::cout << "Your Command \"" << input << "\" is Not Valid" << std::endl;
 }
+

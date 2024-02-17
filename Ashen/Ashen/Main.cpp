@@ -42,31 +42,30 @@ int main() {
 
 	
 	// THE MAIN LOOP
-	while (ASHEN_IS_ON) {
-		// Defining the Command
-		std::string Input;
-		//displaying the current Working Directory
-		std::cout << COLOR_PURPLE << fs::current_path().string() << ">" << COLOR_RESET;
-		// User Enters the Command
-		std::getline(std::cin, Input);
+    // THE MAIN LOOP
+    while (ASHEN_IS_ON) {
+        // Defining the Command
+        std::string Input;
+        //displaying the current Working Directory
+        std::cout << COLOR_PURPLE << fs::current_path().string() << ">" << COLOR_RESET;
+        // User Enters the Command
+        std::getline(std::cin, Input);
+        std::stringstream SS(Input);
+        std::string Command, Parameter;
+        SS >> Command >> Parameter;
+        
+        //  handling white spaces before the command
+        Input.erase(0, Input.find_first_not_of(" \t\n\r\f\v"));
 
-		//  handling white spaces before the command
-		Input.erase(0, Input.find_first_not_of(" \t\n\r\f\v"));
+        // Executing Simple Commands 
 
-
-
-		// Executing Simple Commands 
-
-
-
-		//handling enter 
-		 if (Input.empty()) {
-			 continue;
-		}
-
-		//Exiting the App
-		else if (Input == "exit" || Input == "Exit") {
-		std::cout << R"(
+        //handling enter 
+        if (Input.empty()) {
+            continue;
+        }
+        //Exiting the App
+        else if (Input == "exit" || Input == "Exit") {
+            std::cout << R"(
  
 /$$$$$$        /$$$$$$$        /$$$$$$        /$$$$$$         /$$$$$$       
 /$$__  $$      | $$__  $$      |_  $$_/       /$$__  $$       /$$__  $$      
@@ -80,18 +79,15 @@ int main() {
                                                                               
                                                                               
 )" << std::endl;
-		//making the app wait until adios displays
-		std::this_thread::sleep_for(std::chrono::seconds(1));
-		break;
+            //making the app wait until adios displays
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+            break;
+        }
 
+        // Else Pass it to the Parser and let the Carnage Begin
+        Parse.parseInput(Command, Parameter);
+    }
 
-	}
-		
-		// Else Pass it to the Parser and let the Carnage Begin
-		Parse.parseInput(Input); 
-
-
-	}
  
 
 

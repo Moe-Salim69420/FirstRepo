@@ -13,24 +13,28 @@
 #include "Executor.h"
 
 // using fs as a namespace for std::fileSystem
-namespace fs = std::filesystem; 
-Logger Log;
+namespace fs = std::filesystem;
 CommandBase CB;
 
-
-void Parser::parseInput(std::string &Input){
+void Parser::parseInput(std::string& Input, std::string& Parameter) {
     std::transform(Input.begin(), Input.end(), Input.begin(), [](unsigned char c) { return std::tolower(c); });
-    //Parser try to find the Command
+
+ 
+
     auto it = CommandBaseMap.find(Input);
-    //if yes call the corresponding function
     if (it != CommandBaseMap.end()) {
-        // Call the corresponding function from CommandBase
-        it->second(Input);
+        // Check if the command function accepts two parameters
+        if (it->second.first.target_type() == typeid(std::function<void(const std::string&, const std::string&)>)) {
+            // Call the function with two parameters
+            it->second.first(Input, Parameter);
+        }
+        else {
+            // Call the function with one parameter
+            it->second.first(Input, Parameter);
+        }
     }
     else {
         // Handle error by the logger
-        Log.LogCommand(Input); 
+        Logger Log = Logger(Input);
     }
 }
-    
-		

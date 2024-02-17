@@ -4,6 +4,6 @@
 
 class Parser {
 public:
-    void parseInput(std::string& Input);
+    void parseInput(std::string& Input , std::string& Parameter);
     
 };
