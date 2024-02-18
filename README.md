@@ -1,2 +1,0 @@
-# FirstRepo
-Ashen-Project Repository
