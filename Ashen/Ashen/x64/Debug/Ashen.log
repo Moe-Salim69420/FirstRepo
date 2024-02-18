@@ -1,2 +1,7 @@
-﻿  Main.cpp
+﻿  Executor.cpp
+C:\Users\hmoda\Documents\Project-Ashen\Implementaion\Dev\Ashen\Ashen\Executor.cpp(84,13): warning C4286: 'const std::system_error &': is caught by base class ('const std::exception &') on line 82
+C:\Users\hmoda\Documents\Project-Ashen\Implementaion\Dev\Ashen\Ashen\Executor.cpp(78,49): warning C4101: 'e': unreferenced local variable
+C:\Users\hmoda\Documents\Project-Ashen\Implementaion\Dev\Ashen\Ashen\Executor.cpp(80,61): warning C4101: 'e': unreferenced local variable
+C:\Users\hmoda\Documents\Project-Ashen\Implementaion\Dev\Ashen\Ashen\Executor.cpp(82,42): warning C4101: 'e': unreferenced local variable
+C:\Users\hmoda\Documents\Project-Ashen\Implementaion\Dev\Ashen\Ashen\Executor.cpp(84,45): warning C4101: 'e': unreferenced local variable
   Ashen.vcxproj -> C:\Users\hmoda\Documents\Project-Ashen\Implementaion\Dev\Ashen\x64\Debug\Ashen.exe

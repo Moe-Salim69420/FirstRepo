@@ -35,6 +35,7 @@ void Parser::parseInput(std::string& Input, std::string& Parameter) {
     }
     else {
         // Handle error by the logger
-        Logger Log = Logger(Input);
+        Logger log; 
+        log.LogCommand(Input); 
     }
 }

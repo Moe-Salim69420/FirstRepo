@@ -1,0 +1,51 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.38.33130.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///c:/users/hmoda/documents/project-ashen/implementaion/dev/ashen/ashen/commandbase.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "581892347451824df1a8a7e71b718048491b31965f4ecbf0f68bada80695f18b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/hmoda/documents/project-ashen/implementaion/dev/ashen/ashen/commandbase.h"
+          },
+          "hashes": {
+            "sha-256": "f948de0e6929449e7611e3a64ca1fbab57f6b38cd330da2d35b24e3c43ce9457"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/hmoda/documents/project-ashen/implementaion/dev/ashen/ashen/executor.h"
+          },
+          "hashes": {
+            "sha-256": "d4212b525885dcc826a5842a491012c695631cbffaa3d4fb4715b4162881fc12"
+          }
+        }
+      ]
+    }
+  ]
+}

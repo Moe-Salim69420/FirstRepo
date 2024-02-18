@@ -41,24 +41,30 @@ int main() {
 	std::cout << "A Terminal App Developed By The Gentlemen >> Yazan - Mohammad: \n";
 
 	
-	// THE MAIN LOOP
+	
     // THE MAIN LOOP
     while (ASHEN_IS_ON) {
-        // Defining the Command
-        std::string Input;
-        //displaying the current Working Directory
+        // current path displays, and user enters the command with its parameter
         std::cout << COLOR_PURPLE << fs::current_path().string() << ">" << COLOR_RESET;
-        // User Enters the Command
         std::getline(std::cin, Input);
-        std::stringstream SS(Input);
-        std::string Command, Parameter;
-        SS >> Command >> Parameter;
-        
-        //  handling white spaces before the command
-        Input.erase(0, Input.find_first_not_of(" \t\n\r\f\v"));
+        size_t firstNonSpaceIndex = Input.find_first_not_of(" \t\n\r\f\v");
 
+        // Extracting the command starting from the first non-whitespace character
+        std::string Command = (firstNonSpaceIndex != std::string::npos) ? Input.substr(firstNonSpaceIndex) : "";
+
+        // Finding the index of the first space character after the command
+        size_t spaceIndex = Command.find(' ');
+
+        // Extracting the parameter starting from the character after the command
+        std::string Parameter = "";
+        if (spaceIndex != std::string::npos) {
+            // If space is found, extract parameter from the character after the space
+            Parameter = Command.substr(spaceIndex + 1);
+            // Update the Command to contain only the command without the parameter
+            Command = Command.substr(0, spaceIndex);
+        }
         // Executing Simple Commands 
-
+        
         //handling enter 
         if (Input.empty()) {
             continue;
@@ -83,7 +89,6 @@ int main() {
             std::this_thread::sleep_for(std::chrono::seconds(1));
             break;
         }
-
         // Else Pass it to the Parser and let the Carnage Begin
         Parse.parseInput(Command, Parameter);
     }
